@@ -4,8 +4,9 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/index.html --public-url '.'",
     "check-updates": "npx npm-check-updates",
+    "deploy": "bin/deploy.sh",
     "start": "tsc --noEmit --watch & parcel src/index.html -p 1234",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet",
     "ts": "tsc --noEmit",
