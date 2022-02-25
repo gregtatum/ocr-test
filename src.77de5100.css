@@ -1,0 +1,71 @@
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.AppRoot, .App {
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App h1 {
+  margin: 5vw;
+}
+
+.App img {
+  max-width: 50%;
+}
+
+
+.dragAndDropArea {
+  display: inherit;
+  width: 100%;
+  isolation: isolate;
+}
+
+.dragAndDropOverlayWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+  justify-content: center;
+  padding: 1em;
+  background-color: rgb(255 255 255 / 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms;
+}
+
+.dragAndDropOverlayWrapper.dragging {
+  opacity: 1;
+}
+
+.dragAndDropOverlay {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #888;
+  border-radius: 10px;
+  color: #666;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+/*# sourceMappingURL=/src.77de5100.css.map */
