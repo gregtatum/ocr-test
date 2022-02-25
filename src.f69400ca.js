@@ -38530,7 +38530,7 @@ function App() {
     className: "App",
     onDrop: function (files) {
       return __awaiter(_this, void 0, void 0, function () {
-        var file, time, text_1, elapsedTime, error_1;
+        var file, time, response, elapsedTime, error_1;
         return __generator(this, function (_a) {
           switch (_a.label) {
             case 0:
@@ -38551,14 +38551,15 @@ function App() {
               , worker.recognize(file)];
 
             case 2:
-              text_1 = _a.sent().data.text;
+              response = _a.sent();
+              console.log('Tessaract response:', response);
               elapsedTime = (performance.now() - time) / 1000;
               setTiming(elapsedTime.toLocaleString('en-US', {
                 style: 'unit',
                 unit: 'second',
                 unitDisplay: 'long'
               }));
-              setText(text_1);
+              setText(response.data.text);
               return [3
               /*break*/
               , 4];
