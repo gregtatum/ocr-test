@@ -196,4 +196,4 @@ require("regenerator-runtime/runtime");const e=require("./createScheduler"),r=re
 },{"react":"n8MK","react-dom":"NKHc","react-redux":"jYIL","./create-store":"ih4A","./actions":"A1Kp","./selectors":"oZHe","tesseract.js":"W8hG","./components/DragAndDrop":"qCIe"}],"QCba":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("./index.css");var e=require("./mount-react");(0,e.init)();
 },{"./index.css":"vKFU","./mount-react":"iIyE"}]},{},["QCba"], null)
-//# sourceMappingURL=/src.fe227ee4.js.map
+//# sourceMappingURL=src.fe227ee4.js.map
