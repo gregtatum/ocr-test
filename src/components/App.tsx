@@ -16,6 +16,7 @@ export function App() {
 
   const [text, setText] = useState<string | null>(null);
   const [image, setImage] = useState<string | null>(null);
+  const [timing, setTiming] = useState<string | null>(null);
 
   return worker ? (
     <DragDropArea
@@ -26,10 +27,20 @@ export function App() {
           setImage(src);
         });
         try {
+          setTiming(null);
+          const time = performance.now();
           setText('Running tesseract.js on the image');
           const {
             data: { text },
           } = await worker.recognize(file);
+          const elapsedTime = (performance.now() - time) / 1000;
+          setTiming(
+            elapsedTime.toLocaleString('en-US', {
+              style: 'unit',
+              unit: 'second',
+              unitDisplay: 'long',
+            }),
+          );
           setText(text);
         } catch (error) {
           console.log('This failed', error);
@@ -38,6 +49,7 @@ export function App() {
     >
       {image ? <img src={image} /> : null}
       <h1>{text ?? 'Drop image here.'}</h1>
+      {timing ? <p>Tesseract.js took {timing}</p> : null}
     </DragDropArea>
   ) : (
     <h1>Loading tesseract.js</h1>
