@@ -9,3 +9,20 @@ body {
   flex-direction: column;
   font-family: sans-serif;
 }
+
+.AppRoot, .App {
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App h1 {
+  margin: 5vw;
+}
+
+.App img {
+  max-width: 50%;
+}

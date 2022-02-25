@@ -64,12 +64,15 @@ module.exports = {
     'react/no-will-update-set-state': 'error',
     'react/no-redundant-should-component-update': 'error',
     'react/no-typos': 'error',
+
+    // Off due to false positives:
+    'react/jsx-key': 'off',
+
     // `no-unused-prop-types` is buggy when we use destructuring parameters in
     // functions as it misunderstands them as functional components.
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1561
     // 'react/no-unused-prop-types': 'error',
     'react/no-unused-state': 'error',
-    'react/jsx-no-bind': 'error',
 
     // overriding recommended rules
     'no-constant-condition': ['error', { checkLoops: false }],
